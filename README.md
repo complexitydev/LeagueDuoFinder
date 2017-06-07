@@ -2,6 +2,10 @@
 Finds Duo'd Players in live games using OP.GG
 
 # Usage
+Running the program:
+
+This program requires Perl and the modules WWW::Mechanize & Switch.
+
 When the program first starts, it will ask you to create a config file. This is all done within the application itself. If you'd like to change your config at any time, the format is: 
 
 REGION
