@@ -13,7 +13,7 @@ sub read_config {
 
     #needs in program update support
     if ( !-e $fn ) {
-        open my $fc, ">", $fn;
+        open my $fh, ">", $fn;
         print "Looks like you don't have a config, let's make one now\n";
         print "Enter your region, ex : NA, EUW\n";
         $region = <STDIN>;
@@ -28,9 +28,9 @@ sub read_config {
         my $cd = dirname( abs_path($0) );
         print "Saving to config in current directory $cd\n";
 
-        print $fc "$region\n";
-        print $fc "$summoner_name\n";
-        close $fc;
+        print $fh "$region\n";
+        print $fh "$summoner_name\n";
+        close $fh;
     }
     else {
         open my $fh, '<', $fn
