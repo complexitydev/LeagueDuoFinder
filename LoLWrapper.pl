@@ -48,8 +48,8 @@ sub init_prog {
     my ( $region, $summoner_name ) = read_config();
     init_crawler( $region, $summoner_name );
     my $content  = get_userpage();
-    my $hash_ref = enumerate_summoners();
-    process_userpages($hash_ref);
+    my $ref = enumerate_summoners();
+    process_userpages($ref);
 }
 
 init_prog();
