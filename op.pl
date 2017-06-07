@@ -1,5 +1,5 @@
 #Ben Humphrey
-#github.com/complexitydevelopment
+#github.com/complexitydev
 #ben@complexitydevelopment.com
 
 use WWW::Mechanize;
