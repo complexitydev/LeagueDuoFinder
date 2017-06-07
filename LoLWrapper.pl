@@ -10,7 +10,7 @@ sub read_config {
     my $summoner_name;
     my $fn = 'config.txt';
 
-    #add update
+    #needs in program update support
     if ( !-e $fn ) {
         open my $fc, ">", $fn;
         print "Looks like you don't have a config, let's make one now\n";
@@ -47,16 +47,8 @@ sub read_config {
 sub init_prog {
     my ( $region, $summoner_name ) = read_config();
     init_crawler( $region, $summoner_name );
-    my $content = get_userpage();
-    my $fn      = 'debugpage.txt';
-    if ( !-e $fn ) {
-        open my $fh, ">", $fn;
-        print $fh $content;
-    }
+    my $content  = get_userpage();
     my $hash_ref = enumerate_summoners();
-    foreach my $key ( keys %$hash_ref ) {
-        print "Key: $key , Value : $hash_ref->{$key}\n";
-    }
     process_userpages($hash_ref);
 }
 

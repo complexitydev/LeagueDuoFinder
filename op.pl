@@ -63,7 +63,7 @@ sub process_userpages {
         my $content = $m->content;
         $content =~ s/\R//g;
 
-        #only latin support
+        #only latin support, selects summoner name in recently played box
         while ( $content =~ /SummonerName Cell">.{0,125}">([a-z0-9 ]+)<\/a>/ig )
         {
             my $name = lc($1);
