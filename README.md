@@ -6,6 +6,8 @@ Running the program:
 
 This program requires Perl and the modules WWW::Mechanize & Switch.
 
+Start the program by opening a command prompt in the current directory. Type 'Perl Wrapper.pl' to launch the application.
+
 When the program first starts, it will ask you to create a config file. This is all done within the application itself. If you'd like to change your config at any time, the format is: 
 
 REGION
